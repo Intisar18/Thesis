@@ -32,12 +32,12 @@ tidy_tweets <- function(tweets) {
 	# Use unnest_token to tokenize tweets
 	tweets_words <- 
 		tweets %>%
-		unnest_tokens(word, clean_tweet, token="tweets") 
+		tidytext::unnest_tokens(word, clean_tweet, token="tweets") 
 
 	# Remove stop words 
 	tweets_words <- 
 		tweets_words %>% 
-		anti_join(stop_words, by = c("word" = "word"))
+		anti_join(tidytext::stop_words, by = c("word" = "word"))
 
 	# Count words by document  
 	tweets_count <- 

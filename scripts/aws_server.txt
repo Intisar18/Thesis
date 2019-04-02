@@ -1,0 +1,8 @@
+
+# Log on
+ssh -i "201903-rstudio.cer" ubuntu@ec2-54-153-35-231.us-west-1.compute.amazonaws.com
+
+# Copy files
+# https://github.com/juanfrans/notes/wiki/Copying-Files-Between-Local-Computer-and-Instance-(AWS)
+
+sudo scp -i "201903-rstudio.cer" ~/devel/R-dev/thesis-affect-in-tweets/data/basic_features* ubuntu@ec2-54-153-35-231.us-west-1.compute.amazonaws.com:/home/rstudio/project/data/
